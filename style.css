@@ -1,0 +1,276 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #080d1b;
+  color: #fff;
+}
+
+header {
+  background: #0b1225;
+  padding: 22px 8%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo, footer h2 {
+  font-size: 25px;
+  color: white;
+}
+
+.logo span, footer span {
+  color: #00c6ff;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+}
+
+nav ul a {
+  color: #ddd;
+  text-decoration: none;
+  transition: .3s;
+}
+
+nav ul a:hover {
+  color: #00c6ff;
+}
+
+.nav-btn, .btn {
+  text-decoration: none;
+  padding: 13px 23px;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.nav-btn, .primary {
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  color: white;
+}
+
+.hero {
+  min-height: 580px;
+  padding: 90px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  background: radial-gradient(circle at 80% 40%, #132c55, #080d1b 60%);
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.tag {
+  color: #00c6ff;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5vw, 65px);
+  line-height: 1.15;
+  margin-bottom: 25px;
+}
+
+.hero h1 span, .about h2 span {
+  color: #00c6ff;
+}
+
+.description {
+  color: #b8c4d9;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.secondary {
+  border: 1px solid #00c6ff;
+  color: #00c6ff;
+}
+
+.circle {
+  width: 290px;
+  height: 290px;
+  border: 2px solid #00c6ff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 70px #007bff55;
+}
+
+.inner-circle {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  display: grid;
+  place-items: center;
+  font-size: 65px;
+  font-weight: bold;
+  box-shadow: 0 0 50px #00c6ff88;
+}
+
+.about, .technology, .contact {
+  padding: 85px 8%;
+  text-align: center;
+}
+
+.about h2, .services h2, .technology h2,
+.contact h2 {
+  font-size: 34px;
+  margin-bottom: 22px;
+}
+
+.about > p:last-child, .technology > p:not(.tag),
+.contact > p:not(.tag) {
+  max-width: 700px;
+  margin: auto;
+  color: #aebbd0;
+  line-height: 1.8;
+}
+
+.services {
+  padding: 85px 8%;
+  text-align: center;
+  background: #0c1428;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 45px;
+}
+
+.card {
+  background: #121e37;
+  padding: 35px 25px;
+  border: 1px solid #203453;
+  border-radius: 12px;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #00c6ff;
+  box-shadow: 0 10px 35px #007bff22;
+}
+
+.icon {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #aebbd0;
+  line-height: 1.7;
+}
+
+.tech-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.tech-list span {
+  padding: 13px 24px;
+  border: 1px solid #00c6ff;
+  color: #00c6ff;
+  border-radius: 25px;
+}
+
+.contact {
+  background: linear-gradient(135deg, #101d3b, #07101f);
+}
+
+.contact .btn {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 15px;
+  background: #050914;
+  color: #9ba9bf;
+  line-height: 2;
+}
+
+footer h2 {
+  margin-bottom: 12px;
+}
+
+@media(max-width: 850px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+}
+
+@media(max-width: 550px) {
+  nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .circle {
+    width: 220px;
+    height: 220px;
+  }
+
+  .inner-circle {
+    width: 145px;
+    height: 145px;
+  }
+
+  .about h2, .services h2,
+  .technology h2, .contact h2 {
+    font-size: 27px;
+  }
+}
